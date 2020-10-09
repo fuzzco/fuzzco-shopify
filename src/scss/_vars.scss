@@ -1,0 +1,106 @@
+@import 'easings';
+
+// Sass constants
+$white: #ffffff;
+$black: #183236;
+$yellow: #faff7a;
+$canary: #fff6b3;
+$sand: #ebe9e4;
+$light-gray: #e7e7e7;
+$gray: #8d8b88;
+$orange: #fe5329;
+$blue: #7d74e4;
+$light-blue: #c5d0ed;
+$dark-blue: #5162b8;
+
+$font-display: 'Antique Olive', sans-serif;
+$font-body: 'Plain', arial;
+$font-bold: 'Trio Grotesk', arial;
+$desktop-padding: 50px;
+$mobile-padding: 15px;
+$header-height: 90px;
+
+// Breakpoints
+$gt-cinema: 'only screen and (min-width: 1800px)';
+$lt-desktop: 'only screen and (max-width: 1100px)';
+$lt-phone: 'only screen and (max-width: 750px)';
+$lt-phone-landscape: 'only screen and (max-width: 750px) and (orientation: landscape)';
+
+// mixins
+@mixin fill {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+@mixin cover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+@mixin contain {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+@mixin scale-type($size) {
+    font-size: #{$size}px;
+    font-size: #{$size / 1200 * 100}vw;
+}
+@mixin no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+@mixin hover {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+// Breakpoints
+// ---------------------------------------------
+$breakpoints: (
+    xl: (
+        min-width: 1100px
+    ),
+    l: (
+        max-width: 992px
+    ),
+    m: (
+        max-width: 840px
+    ),
+    s: (
+        max-width: 700px
+    ),
+    xs: (
+        max-width: 480px
+    )
+);
+@mixin bp($name) {
+    $value: map-get($breakpoints, $name);
+    @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    } @else {
+        @warn "The '#{$name}' breakpoint is not defined. "
+        + "Please make sure it is defined in the global.scss '$breakpoint' map.";
+    }
+}
+
+@mixin smaller-than($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+@mixin bigger-than($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}

@@ -1,0 +1,127 @@
+@import 'vars';
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility !important;
+}
+
+a {
+    transition: color 250ms;
+    color: inherit;
+
+    @include hover {
+        text-decoration: underline;
+    }
+}
+
+main {
+    box-sizing: border-box;
+}
+.contained {
+    max-width: 1100px;
+    margin: auto;
+}
+.entry {
+    & > * {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    & > *:first-child {
+        margin-top: 0;
+    }
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+    h2 {
+        font-size: 70px;
+        font-family: $font-display;
+        font-weight: 400;
+    }
+    h3 {
+        line-height: 1.3;
+        font-size: 36px;
+        font-family: $font-display;
+        font-weight: 400;
+    }
+    h5 {
+        margin: 75px 0;
+        text-align: center;
+        font-family: $font-bold;
+        font-weight: 400;
+        font-size: 22px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    ul {
+        padding-left: 20px;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    & > blockquote {
+        font-family: $font-display;
+        max-width: initial;
+        font-size: 70px;
+        margin-bottom: 90px;
+        margin-top: 90px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    a {
+        text-decoration: none;
+        color: $dark-blue;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // mobile
+    @include bp(s) {
+        h2 {
+            font-size: 32px;
+        }
+        h3 {
+            font-size: 26px;
+        }
+    }
+}
+.super-image-container {
+    margin: 0;
+}
+
+// button reset
+button {
+    @include no-select;
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    border-radius: 0;
+    font-weight: inherit;
+    font-size: inherit;
+    padding: 0;
+}
+// input reset
+input {
+    background-color: transparent;
+    appearance: none;
+    font-family: $font-body;
+    border-radius: 0;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: 1;
+    border: none;
+    -webkit-appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+}
