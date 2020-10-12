@@ -1,14 +1,14 @@
 [
     {
         "name": "theme_info",
-        "theme_name": "Natalist Placeholder",
+        "theme_name": "Fuzzco Shopify",
         "theme_version": "1.0.0",
         "theme_author": "Fuzzco",
         "theme_documentation_url": "https://github.com/fuzzco",
         "theme_support_url": "https://github.com/fuzzco"
     },
     {
-        "name": "Home Page",
+        "name": "Example Entry",
         "settings": [
             {
                 "type": "image_picker",
@@ -20,163 +20,6 @@
                 "id": "subscribe_text",
                 "label": "Subscribe Text"
             },
-            {
-                "type": "text",
-                "id": "subscribe_action_text",
-                "label": "Subscribe Button Text"
-            },
-            {
-                "type": "text",
-                "id": "bc_title",
-                "label": "Bundle Callout Title"
-            },
-            {
-                "type": "richtext",
-                "id": "bc_content",
-                "label": "Bundle Callout Content"
-            },
-            {
-                "type": "image_picker",
-                "id": "bc_primary_image",
-                "label": "Bundle Callout Primary Image"
-            },
-            {
-                "type": "image_picker",
-                "id": "bc_second_image",
-                "label": "Bundle Callout Secondary Image"
-            },
-            {
-                "type": "richtext",
-                "id": "bc_second_content",
-                "label": "Bundle Callout Secondary Content"
-            }
         ]
     },
-    {
-        "name": "Header",
-        "settings": [
-            {
-                "type": "product",
-                "id": "featured_shop_item",
-                "label": "Featured Shop Item"
-            },
-            {
-                "type": "richtext",
-                "id": "shop_everything_copy",
-                "label": "Shop Everything Copy"
-            }
-        ]
-    },
-    {
-        "name": "Gift Cards",
-        "settings": [
-            {
-                "type": "image_picker",
-                "id": "gift_card_image",
-                "label": "Gift Card Image"
-            }
-        ]
-    },
-    {
-        "name": "Product",
-        "settings": [
-            {
-                "type": "url",
-                "id": "dont_sell_link",
-                "label": "'What we don’t sell' link"
-            },
-            {
-                "type": "product",
-                "id": "bundle_product",
-                "label": "Primary Bundle Product"
-            },
-            {
-                "type": "richtext",
-                "id": "bundle_cta_text",
-                "label": "Bundle CTA Text"
-            }
-        ]
-    },
-    {
-        "name": "Footer",
-        "settings": [
-            {
-                "type": "richtext",
-                "id": "footer_copy",
-                "label": "Footer Copy"
-            }
-        ]
-    },
-    {
-        "name": "Blog Featured Posts",
-        "settings": [
-            {
-                "type": "article",
-                "id": "featured_article_one",
-                "label": "First Featured Article"
-            },
-            {
-                "type": "article",
-                "id": "featured_article_two",
-                "label": "Second Featured Article"
-            }
-        ]
-    },
-    {
-        "name": "Global Banner",
-        "settings": [
-            {
-                "type": "checkbox",
-                "id": "gb_enabled",
-                "label": "Enable Global Banner"
-            },
-            {
-                "type": "richtext",
-                "id": "gb_content",
-                "label": "Global Banner Content"
-            }
-        ]
-    },
-    {
-        "name": "Newsletter Roadblock",
-        "settings": [
-            {
-                "type": "checkbox",
-                "id": "rb_enabled",
-                "label": "Enable Roadblock"
-            },
-            {
-                "type": "image_picker",
-                "id": "rb_image",
-                "label": "Roadblock Image"
-            },
-            {
-                "type": "richtext",
-                "id": "rb_primary_content",
-                "label": "Primary Content"
-            },
-            {
-                "type": "richtext",
-                "id": "rb_secondary_content",
-                "label": "Secondary Content"
-            },
-            {
-                "type": "select",
-                "id": "rb_format",
-                "label": "Roadblock Format",
-                "options": [
-                    {
-                        "value": "half",
-                        "label": "Half & Half"
-                    },
-                    {
-                        "value": "portrait",
-                        "label": "Portrait"
-                    }
-                ],
-                "default": "half",
-                "info": "'Half & Half' provides a split layout with an image on the left and form on the right. Portrait is in inline layout with the ability to add a portrait image."
-            }
-        ]
-    }
 ]
