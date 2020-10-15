@@ -1,19 +1,21 @@
 <!-- Assumes: image -->
 {% assign sizes = '100,400,800' | split: ',' %}
 
-<div class="image" style="--padding: {{ image.aspect_ratio }}">
-    <img 
-        src="{{ image.src | img_url: 'master' }}" 
-        alt="{{ image.alt }}" 
-        width="{{ image.width }}" 
-        height="{{ image.height }}"
-        srcset="
-            {% for size in sizes %}
-                {% assign size_string = size | append: 'x' %}
-                {{ image.src | img_url: size_string }} {{ size }}w,
-            {% endfor %}
-            
-            {{ image.src | img_url: 'master' }} 1400w
-        "
-    >
+<div class="image" style="--padding: {{ 1 | divided_by: image.aspect_ratio }}">
+    <div class="image-wrap">
+        <img 
+            src="{{ image.src | img_url: 'master' }}" 
+            alt="{{ image.alt }}" 
+            width="{{ image.width }}" 
+            height="{{ image.height }}"
+            srcset="
+                {% for size in sizes %}
+                    {% assign size_string = size | append: 'x' %}
+                    {{ image.src | img_url: size_string }} {{ size }}w,
+                {% endfor %}
+                
+                {{ image.src | img_url: 'master' }} 1400w
+            "
+        >
+    </div>
 </div>
