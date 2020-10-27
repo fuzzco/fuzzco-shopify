@@ -66,6 +66,15 @@ $lt-phone-landscape: 'only screen and (max-width: 750px) and (orientation: lands
     font-size: $size; // Fallback in px
     font-size: #{$size / 16px}rem;
 }
+@mixin select-reset {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    border: none;
+    border-radius: 0;
+}
 
 // Breakpoints
 // ---------------------------------------------
