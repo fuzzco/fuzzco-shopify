@@ -102,8 +102,9 @@ $breakpoints: (
             @content;
         }
     } @else {
-        @warn "The '#{$name}' breakpoint is not defined. "
-        + "Please make sure it is defined in the global.scss '$breakpoint' map.";
+        @media (max-width: #{$name}) {
+            @content;
+        }
     }
 }
 
